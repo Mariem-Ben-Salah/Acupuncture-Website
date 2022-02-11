@@ -21,6 +21,8 @@
         <ul class="navigation"> 
             <li ><a href="Index.php">Accueil</a></li>
             <li ><a href="Contact.php">Contact</a></li>
+            <li ><a href="page_filtree.php">Recherche filtrée</a></li>
+            <li ><a href="mot_clef.php">Recherche par mot-clef</a></li>
             <li ><a target="_blank" href="map.php">Map</a></li>
             <li><button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Connexion</button></li>  
             <li class="bonjour" id="bonjour"></li>
