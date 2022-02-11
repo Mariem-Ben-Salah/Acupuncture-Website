@@ -19,9 +19,9 @@
 
     <div >
         <ul class="navigation"> 
-            <li ><a href="Index.html">Accueil</a></li>
-            <li ><a href="Contact.html">Contact</a></li>
-            <li ><a target="_blank" href="map.html">Map</a></li>
+            <li ><a href="Index.php">Accueil</a></li>
+            <li ><a href="Contact.php">Contact</a></li>
+            <li ><a target="_blank" href="map.php">Map</a></li>
             <li><button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Connexion</button></li>  
             <li class="bonjour" id="bonjour"></li>
         </ul>
