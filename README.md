@@ -1,6 +1,6 @@
 # SITE
 
-<<<<<<< HEAD
 HELLO   1
 TEST PULL
 TEST SILIA
+
