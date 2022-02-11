@@ -19,10 +19,10 @@
 
     <div >
         <ul class="navigation"> 
-            <li ><a href="Index.html">Accueil</a></li>
-            <li ><a href="Contact.html">Contact</a></li>
-            <li ><a href="page_filtree.html">Recherche filtrée</a></li>
-            <li ><a href="mot_clef.html">Recherche par mot-clef</a></li>
+            <li ><a href="Index.php">Accueil</a></li>
+            <li ><a href="Contact.php">Contact</a></li>
+            <li ><a href="page_filtree.php">Recherche filtrée</a></li>
+            <li ><a href="mot_clef.php">Recherche par mot-clef</a></li>
             <li><button class="boutonCnx" onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>
             <li id="bonjour" class="bonjour"></li>
         </ul>
@@ -142,7 +142,7 @@ class="close" title="Close Modal">&times;</span>
         <span class="description"> {{description}}</span>
 
         </div>
-        <a href="Reservation.html?destination={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
+        <a href="Reservation.php?destination={{ville}}" class="reservation" ><i class="fas fa-plane-departure"></i> Réservez maintenant!</a>
         <p id="zone_meteo" class="zone_meteo">Zone meteo</p>
 
       
