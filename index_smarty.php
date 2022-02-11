@@ -9,54 +9,28 @@ $Smarty->setCompileDir('templates_c/');
 $Smarty->setConfigDir('configs/');
 $Smarty->setCacheDir('cache/');
 
+/*
+//connection bd
+
+$user = 'tidal@tidal.tidal';
+$passwd = 'tidal!';
+
+$dbh = new PDO('chaine de connexion','$user','$passwd');
+
+//recuperer les d
+
+$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
+
+$sth = $dbh->prepare( $sql );
+$sth->execute(array(':codeMeridien' => 'P'));
+
+$data = $sth->fetchAll();
+*/
 
 
-
-
-
-/*$pathos = array(
-    array(
-      title => 'patho1',
-      symptomes => 'fievre',
-      meridien => 'poumon',
-      type => 'meridien',
-      caracteristique => 'chaud',
-    ),
-    array(
-        title => 'patho2',
-        symptomes => 'maux',
-        meridien => 'rein',
-        type => 'meridien',
-        caracteristique => 'froid',
-    ),
-    array(
-        title => 'patho3',
-        symptomes => 'les symptomes',
-        meridien => 'rein',
-        type => 'meridien',
-        caracteristique => 'chaud',
-    ),
-    array(
-        title => 'patho4',
-        symptomes => 'les symptomes',
-        meridien => 'poumon',
-        type => 'orange',
-        caracteristique => 'chaud',
-    ),
-    array(
-        title => 'patho5',
-        symptomes => 'les symptomes',
-        meridien => 'poumon',
-        type => 'orange',
-        caracteristique => 'froid',
-      )
-); */
 
 $pathos = array("patho1", "patho2", "patho3");
-
-
 $Smarty -> assign("pathos" , $pathos);
-
 
 $Smarty -> display("templates/index.tpl");
 

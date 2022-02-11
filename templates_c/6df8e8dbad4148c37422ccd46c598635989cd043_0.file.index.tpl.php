@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-02-11 11:43:06
+/* Smarty version 4.1.0, created on 2022-02-11 12:09:56
   from '/var/www/html/SITE/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62063dba5e7ed0_35160576',
+  'unifunc' => 'content_6206440473e9d0_79308271',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6df8e8dbad4148c37422ccd46c598635989cd043' => 
     array (
       0 => '/var/www/html/SITE/templates/index.tpl',
-      1 => 1644576177,
+      1 => 1644577740,
       2 => 'file',
     ),
   ),
@@ -22,15 +22,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_62063dba5e7ed0_35160576 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6206440473e9d0_79308271 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head onload="ville()">
 <title>Les Acupuncteurs Lyonnais</title>
 
-<link rel="icon" type="image/png" sizes="16x16" href="/var/www/html/SITE/Images/favicon-16x16.png">
-<link rel="stylesheet" href="/var/www/html/SITE/css/style.css"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/SITE/Images/favicon-16x16.png">
+<link rel="stylesheet" href="/SITE/css/style.css"/>
 <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"><?php echo '</script'; ?>
 >
@@ -40,7 +40,7 @@ function content_62063dba5e7ed0_35160576 (Smarty_Internal_Template $_smarty_tpl)
 
 
 <div id="scroll_to_top">
-    <a href="#top"><img src="/var/www/html/SITE/Images/fleche.png"  alt="Retourner en haut" /></a>
+    <a href="#top"><img src="/SITE/Images/fleche.png"  alt="Retourner en haut" /></a>
 </div>
 </head>
 
