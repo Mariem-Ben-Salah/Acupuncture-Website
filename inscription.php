@@ -5,24 +5,25 @@ include("infos.php");
 $erreur = "";
 if (isset($valider)) {
     if (empty($nom)) $erreur = "Le champs nom est obligatoire!";
-    if (empty($prenom)) $erreur = "Le champs prénom est obligatoire!";
-    if (empty($pseudo)) $erreur = "Le champs Pseudo est obligatoire!";
-    if (empty($password)) $erreur = "Le chanmps mot de passe est obligatoire!";
-    if ($password != $passwordConf) $erreur = "Mots de passe differents!";
+    elseif (empty($prenom)) $erreur = "Le champs prénom est obligatoire!";
+    elseif (empty($pseudo)) $erreur = "Le champs Pseudo est obligatoire!";
+    elseif (empty($password)) $erreur = "Le chanmps mot de passe est obligatoire!";
+    elseif ($password != $passwordConf) $erreur = "Mots de passe differents!";
 else {
     include("connexion.php");
-$verify_pseudo = $pdo->prepare("select id from users_infos where pseudo=? limit 1");
-$verify_pseudo->execute(array($pseudo));
-$user_pseudo = $verify_pseudo->fetchAll();
-if (count($user_pseudo) > 0)
-$erreur = "Pseudo existe déjà!";
-else {
-$ins = $pdo->prepare("insert into users_infos(nom,prenom,pseudo,password) values(?,?,?,?)");
-if ($ins->execute(array($nom, $prenom, $pseudo, md5($password))))
-header("location:login.php");
+    $verify_pseudo = $pdo->prepare("select id from users_infos where pseudo=? limit 1");
+    $verify_pseudo->execute(array($pseudo));
+    $user_pseudo = $verify_pseudo->fetchAll();
+    if (count($user_pseudo) > 0)
+        $erreur = "Pseudo existe déjà!";
+    else {
+        $ins = $pdo->prepare("insert into users_infos(nom,prenom,pseudo,password) values(?,?,?,?)");
+        if ($ins->execute(array($nom, $prenom, $pseudo, md5($password))))
+            header("location:login.php");
      }
    }
 }
+
 ?>
 <!DOCTYPE  html>
  

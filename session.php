@@ -1,16 +1,16 @@
 <?php
  
 session_start();
-if ($_SESSION["connecter"] != "yes") {
+if ($_SESSION["autoriser"] != "oui") {
 header("location:login.php");
 exit();
 }
 if (date("H") < 18)
 $bienvenue = "Bonjour et bienvenue "  .
-$_SESSION["prenom_nom"];
+$_SESSION["prenomNom"];
 else
 $bienvenue = "Bonsoir et bienvenue "  .
-$_SESSION["prenom_nom"];
+$_SESSION["prenomNom"];
 ?>
  
 <!DOCTYPE  html>
