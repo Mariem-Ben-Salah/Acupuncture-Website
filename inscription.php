@@ -1,4 +1,75 @@
 <?php
+   session_start();
+   include("infos.php");
+   @$valider=$_POST["valider"];
+   $erreur="";
+   
+   if(isset($valider)){
+      if(empty($nom)) $erreur="Nom laissé vide!";
+      elseif(empty($prenom)) $erreur="Prénom laissé vide!";
+      elseif(empty($prenom)) $erreur="Prénom laissé vide!";
+      elseif(empty($pseudo)) $erreur="Pseudo laissé vide!";
+      elseif(empty($password)) $erreur="Mot de passe laissé vide!";
+      elseif ($password != $passwordConf) $erreur = "Mots de passe non identiques!";
+      else{
+         include("connexion.php");
+         $sel=$pdo->prepare("select id from users_infos where pseudo=? limit 1");
+         $sel->execute(array($pseudo));
+         $tab=$sel->fetchAll();
+         if(count($tab)>0)
+            $erreur="Login existe déjà!";
+         else{
+            $ins=$pdo->prepare("insert into users_infos(nom,prenom,pseudo,password) values(?,?,?,?)");
+            if($ins->execute(array($nom,$prenom,$pseudo,md5($password))))
+               header("location:login.php");
+         }   
+      }
+   }
+?>
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <style>
+         *{
+            font-family:arial;
+         }
+         body{
+            margin:20px;
+         }
+         input{
+            border:solid 1px #2222AA;
+            margin-bottom:10px;
+            padding:16px;
+            outline:none;
+            border-radius:6px;
+         }
+         .erreur{
+            color:#CC0000;
+            margin-bottom:10px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Inscription</h1>
+      <div class="erreur"><?php echo $erreur ?></div>
+      <form name="fo" method="post" action="">
+         <input type="text" name="nom" placeholder="Nom" value="<?php echo $nom?>" /><br />
+         <input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom?>" /><br />
+         <input type="text" name="pseudo" placeholder="Pseudo" value="<?php echo $login?>" /><br />
+         <input type="password" name="password" placeholder="Mot de passe" /><br />
+         <input type="password" name="passconf" placeholder="Confirmer Mot de passe" /><br />
+         <input type="submit" name="valider" value="S'authentifier" />
+      </form>
+   </body>
+</html>
+
+
+
+
+
+<?php
+/*
 session_start();
 include("infos.php");
 @$valider = $_POST["inscrire"];
@@ -98,3 +169,4 @@ text-decoration: underline;
 </form>
 </body>
 </html>
+*/
