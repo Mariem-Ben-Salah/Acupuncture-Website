@@ -4,14 +4,12 @@
 <head onload="ville()">
 <title>Les Acupuncteurs Lyonnais</title>
 
-<link rel="icon" type="image/png" sizes="16x16" href="/SITE/Images/favicon-16x16.png">
 <link rel="stylesheet" href="/SITE/css/style.css"/>
 <script src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <div id="scroll_to_top">
-    <a href="#top"><img src="/SITE/Images/fleche.png"  alt="Retourner en haut" /></a>
 </div>
 </head>
 
@@ -25,13 +23,10 @@
 
 <div class="apropos" id = "patho">
     
-    <ul>
         {foreach $pathos AS $patho}
-            <li>
-                {$patho}
-            </li>
+              <h3> Patho n° {strval($patho->idp)} </h3>
+              <p> desc : {$patho->desc} </p>
         {/foreach}
-    </ul>
 
   <br>
   <br>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-02-11 12:09:56
+/* Smarty version 4.1.0, created on 2022-02-22 11:06:51
   from '/var/www/html/SITE/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6206440473e9d0_79308271',
+  'unifunc' => 'content_6214b5bbd25d35_25114970',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6df8e8dbad4148c37422ccd46c598635989cd043' => 
     array (
       0 => '/var/www/html/SITE/templates/index.tpl',
-      1 => 1644577740,
+      1 => 1645524409,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6206440473e9d0_79308271 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6214b5bbd25d35_25114970 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
 <head onload="ville()">
 <title>Les Acupuncteurs Lyonnais</title>
 
-<link rel="icon" type="image/png" sizes="16x16" href="/SITE/Images/favicon-16x16.png">
 <link rel="stylesheet" href="/SITE/css/style.css"/>
 <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/248965cc4b.js" crossorigin="anonymous"><?php echo '</script'; ?>
@@ -40,7 +39,6 @@ function content_6206440473e9d0_79308271 (Smarty_Internal_Template $_smarty_tpl)
 
 
 <div id="scroll_to_top">
-    <a href="#top"><img src="/SITE/Images/fleche.png"  alt="Retourner en haut" /></a>
 </div>
 </head>
 
@@ -55,21 +53,19 @@ function content_6206440473e9d0_79308271 (Smarty_Internal_Template $_smarty_tpl)
 
 <div class="apropos" id = "patho">
     
-    <ul>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pathos']->value, 'patho');
 $_smarty_tpl->tpl_vars['patho']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['patho']->value) {
 $_smarty_tpl->tpl_vars['patho']->do_else = false;
 ?>
-            <li>
-                <?php echo $_smarty_tpl->tpl_vars['patho']->value;?>
-
-            </li>
+              <h3> Patho n° <?php echo strval($_smarty_tpl->tpl_vars['patho']->value->idp);?>
+ </h3>
+              <p> desc : <?php echo $_smarty_tpl->tpl_vars['patho']->value->desc;?>
+ </p>
         <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    </ul>
 
   <br>
   <br>

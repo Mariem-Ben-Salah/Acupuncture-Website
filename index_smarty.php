@@ -9,29 +9,50 @@ $Smarty->setCompileDir('templates_c/');
 $Smarty->setConfigDir('configs/');
 $Smarty->setCacheDir('cache/');
 
-/*
+
 //connection bd
 
-$user = 'tidal@tidal.tidal';
-$passwd = 'tidal!';
+//$user = "tidal@tidal.tidal";
+//$passwd = "tidal!";
 
-$dbh = new PDO('chaine de connexion','$user','$passwd');
+$user = 'pgtidal';
+$passwd = 'tidal';
+
+$dbh = new PDO("pgsql:host=localhost;dbname=acudb",$user,$passwd);
 
 //recuperer les d
 
-$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
+//$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
+
+$sql =" SELECT * FROM patho ;";
 
 $sth = $dbh->prepare( $sql );
-$sth->execute(array(':codeMeridien' => 'P'));
+$sth->execute();
+//$sth->execute(array(':codeMeridien' => 'P'));
 
-$data = $sth->fetchAll();
+
+//$pathos = $sth->fetchAll(PDO::FETCH_ASSOC);
+$pathos = $sth->fetchAll(PDO::FETCH_OBJ);
+
+
+
+
+//$pathos = array("patho1", "patho2", "patho3");
+//$Smarty -> assign("pathos" , $pathos);
+
+
+/*for ($i=0; $i<5; $i++) {
+    $
+    } 
 */
 
 
+//echo $data[0]->desc;
 
-$pathos = array("patho1", "patho2", "patho3");
 $Smarty -> assign("pathos" , $pathos);
 
 $Smarty -> display("templates/index.tpl");
+
+//var_dump($pathos);
 
 ?>
