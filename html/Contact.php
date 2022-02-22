@@ -19,7 +19,7 @@
 
     <div >
         <ul class="navigation"> 
-            <li ><a href="Index.php">Accueil</a></li>
+            <li ><a href="index_smarty.php">Accueil</a></li>
             <li ><a href="Contact.php">Contact</a></li>
             <li ><a href="page_filtree.php">Recherche filtrée</a></li>
             <li ><a href="mot_clef.php">Recherche par mot-clef</a></li>
