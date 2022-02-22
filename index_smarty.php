@@ -10,7 +10,7 @@ $Smarty->setConfigDir('configs/');
 $Smarty->setCacheDir('cache/');
 
 
-//connection bd
+//connection BD
 
 //$user = "tidal@tidal.tidal";
 //$passwd = "tidal!";
