@@ -8,7 +8,7 @@
          */
     try 
     {
-        $bdd = new PDO("pgsql:host=localhost;dbname=acudb;charset=utf8", "pgtidal", "tidal");
+        $bdd = new PDO("pgsql:host=localhost;dbname=acudb","pgtidal", "tidal");
     }
     catch(PDOException $e)
     {
