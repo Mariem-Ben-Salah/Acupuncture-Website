@@ -51,6 +51,10 @@ $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
 
 $Smarty -> assign("pathos" , $pathos);
 
+// session_start();
+
+// $_SESSION['index']='index';
+
 $Smarty -> display("templates/index.tpl");
 
 //var_dump($pathos);
