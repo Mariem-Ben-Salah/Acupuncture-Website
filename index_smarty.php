@@ -10,7 +10,7 @@ $Smarty->setConfigDir('configs/');
 $Smarty->setCacheDir('cache/');
 
 
-//connection BD
+//----------------------------------connection BD--------------------------------------------
 
 //$user = "tidal@tidal.tidal";
 //$passwd = "tidal!";
@@ -20,43 +20,61 @@ $passwd = 'tidal';
 
 $dbh = new PDO("pgsql:host=localhost;dbname=acudb",$user,$passwd);
 
-//recuperer les d
-
-//$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
-
-$sql =" SELECT * FROM patho ;";
-
-$sth = $dbh->prepare( $sql );
-$sth->execute();
-//$sth->execute(array(':codeMeridien' => 'P'));
 
 
-//$pathos = $sth->fetchAll(PDO::FETCH_ASSOC);
-$pathos = $sth->fetchAll(PDO::FETCH_OBJ);
+//-----------------------------------recuperer les Données--------------------------------------------
+
+// //$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
+
+// $sql =" SELECT * FROM patho ;";
+
+// $sth = $dbh->prepare( $sql );
+// $sth->execute();
+// //$sth->execute(array(':codeMeridien' => 'P'));
+
+// //$pathos = $sth->fetchAll(PDO::FETCH_ASSOC);
+// $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
+
+// $Smarty -> assign("pathos" , $pathos);
 
 
 
+//-----------------------------------recuperer les Données Filtrées--------------------------------------------
 
-//$pathos = array("patho1", "patho2", "patho3");
-//$Smarty -> assign("pathos" , $pathos);
+if(isset($_GET['filtre_mer'])){
 
-
-/*for ($i=0; $i<5; $i++) {
-    $
-    } 
-*/
-
-
-//echo $data[0]->desc;
+    $sql_filtre_mer =" SELECT * FROM patho WHERE mer = :codeMeridien ;";
+    $sth_filtre_mer = $dbh->prepare( $sql_filtre_mer );
+    $sth_filtre_mer->execute(array(':codeMeridien' => $_GET['filtre_mer']));
+    $pathos = $sth_filtre_mer->fetchAll(PDO::FETCH_OBJ);
+}
+else {
+    $sql =" SELECT * FROM patho ;";
+    $sth = $dbh->prepare( $sql );
+    $sth->execute();
+    $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
+}
 
 $Smarty -> assign("pathos" , $pathos);
 
-// session_start();
 
-// $_SESSION['index']='index';
 
-$Smarty -> display("templates/index.tpl");
 
 //var_dump($pathos);
+
+if(isset($_GET['page'])){
+    if ($_GET['page']=="index"): 
+        $Smarty -> display("templates/index.tpl"); 
+    elseif ($_GET['page']=="page_filtree"): 
+        $Smarty -> display("templates/page_filtree.tpl");
+    elseif ($_GET['page']=="Contact"):
+        $Smarty -> display("templates/Contact.tpl");
+    elseif ($_GET['page']=="mot_clef"):
+        $Smarty -> display("templates/mot_clef.tpl");
+    endif;
+}
+else {
+    $Smarty -> display("templates/index.tpl");
+}
 
 ?>
