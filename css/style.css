@@ -12,6 +12,7 @@ body{
 p{
   color: azure;
 }
+
 .navigation {
   border-radius: 10%;
   display: flex;
@@ -65,7 +66,6 @@ p{
   color: white;
 }
 
-
 .navigation a:hover {
   background: #013220;
 }
@@ -88,7 +88,6 @@ p{
   padding-top: 0%;
 }
 
-
 .modal-content {
   font-family: lato;
   font-weight: 400;
@@ -107,7 +106,6 @@ p{
   text-align: center;
   font-weight: 500;
 }
-
 
 .close {
   position: absolute;
@@ -269,8 +267,6 @@ img {
   margin: 2%;
 }
 
-
-
 a.reservation{
   background-color: #7e3a3a;
   text-decoration: none;
@@ -363,7 +359,7 @@ a.reservation:hover{
   border-color: #4CAF50;
 }
 
-.form textarea{
+.form textarea{•••••
   opacity: 80%;
   border-radius: 20%;
   border-color: #4CAF50;
@@ -417,7 +413,6 @@ a.reservation:hover{
   height: 500px;
   vertical-align: middle; 
 }
-
 
 footer{
   display: flex;

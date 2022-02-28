@@ -6,7 +6,7 @@
             <meta name="author" content="NoS1gnal"/>
 
             <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/style.css">
             <title>Connexion</title>
         </head>
         <body>
@@ -60,19 +60,33 @@
             </form>
             <p class="text-center"><a href="inscription.php">Inscription</a></p>
         </div>
+
+
         <style>
             .login-form {
-                width: 340px;
-                margin: 50px auto;
+                font-size: 100%; 
+                padding: 5%;
+                font-family: lato;
+                font-weight: 400;
+                background-color:#4CAF50;
+                text-align: center;
+                margin: 15% auto; 
+                border: 50% solid #013220;
+                width: 35%; 
+                border-radius: 5%;
+                padding-bottom: 2%;
             }
             .login-form form {
                 margin-bottom: 15px;
                 background: #f7f7f7;
+                color:  #130e3b
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
                 padding: 30px;
             }
             .login-form h2 {
                 margin: 0 0 15px;
+                font: lato;
+                color: #013220;
             }
             .form-control, .btn {
                 min-height: 38px;
@@ -82,6 +96,9 @@
                 font-size: 15px;
                 font-weight: bold;
             }
+
         </style>
+  
+
         </body>
 </html>

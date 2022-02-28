@@ -33,8 +33,8 @@
                             $ip = $_SERVER['REMOTE_ADDR']; 
 
                             // On insère dans la base de données
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip, token) VALUES(:pseudo, :email, :password, :ip, :token)');
-                            $insert->execute(array(
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, "password", ip, token) VALUES(:pseudo, :email, :password, :ip, :token)');
+                            $success = $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
@@ -42,9 +42,17 @@
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             // On redirige avec le message de succès
+                            if (!$success) {
+                                var_dump($insert->errorInfo());
+                            }
+                            
                             header('Location:inscription.php?reg_err=success');
+
                             die();
-                        }else{ header('Location: inscription.php?reg_err=password'); die();}
+                        }
+                        else{ 
+                            header('Location: inscription.php?reg_err=password'); die();
+                        }
                     }else{ header('Location: inscription.php?reg_err=email'); die();}
                 }else{ header('Location: inscription.php?reg_err=email_length'); die();}
             }else{ header('Location: inscription.php?reg_err=pseudo_length'); die();}
