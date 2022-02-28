@@ -9,17 +9,14 @@ body{
   background-color: #013220;
 }
 
-a:link, a:visited {
+.a_filtre {
   background-color:rgb(250, 250, 250);
   color:rgba(0, 0, 0, 0.9);
-  padding: 14px 25px;
+  padding: 10px 20px;
+  margin: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}
-
-a:hover, a:active {
-  background-color:rgb(255, 255, 255);
 }
 
 p{

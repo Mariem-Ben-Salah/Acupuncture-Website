@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-02-22 12:40:29
+/* Smarty version 4.1.0, created on 2022-02-28 10:49:59
   from '/var/www/html/SITE/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6214cbadb53d72_12913305',
+  'unifunc' => 'content_621c9ac72d4e78_43315989',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6df8e8dbad4148c37422ccd46c598635989cd043' => 
     array (
       0 => '/var/www/html/SITE/templates/index.tpl',
-      1 => 1645529943,
+      1 => 1646041797,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6214cbadb53d72_12913305 (Smarty_Internal_Template $_smarty_tpl) {
+function content_621c9ac72d4e78_43315989 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
   
@@ -57,65 +57,6 @@ $_smarty_tpl->tpl_vars['patho']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
-  <br>
-  <br>
-
-  <?php echo '<script'; ?>
- type="text/javascript">
-  function toggle_text(id) {
-    
-    var span = document.getElementById(id);
-    if(span.style.display == "none") {
-      span.style.display = "inline";
-    } else {
-      span.style.display = "none";
-    }
-  }
-  <?php echo '</script'; ?>
-> <br>
-
-</div>
-
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-class="close" title="Close Modal">&times;</span>
-
- 
-  <form class="modal-content animate" >
-
-    <div class="container1">
-      <p>Connectez-vous!</p>
-      <div>
-        <label for="uname">Email ou téléphone</label>
-        <br>
-        <input id="coname" type="text" placeholder="ex: nom@gmail.com" name="uname" required>
-      </div>
-
-      <div>
-       <label for="psw" >Mot de passe</label>
-       <br>
-       <input id="copass" type="password" placeholder="Entrez mot de passe" name="psw" required>
-      </div>
-    </div>
-
- 
-    <div class="container2" >   
-      <div>
-       <button class="boutonForm" type="button" class="cancelbtn" onclick="hello(), document.getElementById('id01').style.display='none'" >Connexion</button>
-       <br>
-       <label>
-         <input type="checkbox" checked="checked" name="remember"> Rester connecté
-       </label>
-       <br>
-      </div>
-      <button class="boutonForm" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
-      <br>
-      <div class="forgotPsw">
-        <a href="#"><span class="psw">Mot de passe oublié?</span></a>
-      </div>
-    </div>
-
-  </form>
 </div>
 
 

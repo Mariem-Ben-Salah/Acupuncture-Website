@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-{include file='head.tpl'}
+    {include file='head.tpl'}
 
-<div id="scroll_to_top">
-    <a href="#top"><img src="../Images/fleche.png"  alt="Retourner en haut" /></a>
-</div>
-</head>
+    <body>
 
-<body onload="appelAPI()">
+        {include file='menu.tpl'}
 
-    {include file='menu.tpl'}
+        <h1>Contact</h1>
 
-    <h1>Contact</h1>
+        {include file='footer.tpl'}
 
-{include file='footer.tpl'}
+    </body>
 
 </html>

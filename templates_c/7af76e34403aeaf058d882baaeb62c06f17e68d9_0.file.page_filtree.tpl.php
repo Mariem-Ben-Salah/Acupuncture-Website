@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-02-28 09:23:12
+/* Smarty version 4.1.0, created on 2022-02-28 10:45:50
   from '/var/www/html/SITE/templates/page_filtree.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_621c8670885113_76603612',
+  'unifunc' => 'content_621c99cee81d61_58792173',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7af76e34403aeaf058d882baaeb62c06f17e68d9' => 
     array (
       0 => '/var/www/html/SITE/templates/page_filtree.tpl',
-      1 => 1646036590,
+      1 => 1646041550,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_621c8670885113_76603612 (Smarty_Internal_Template $_smarty_tpl) {
+function content_621c99cee81d61_58792173 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -42,39 +42,44 @@ function content_621c8670885113_76603612 (Smarty_Internal_Template $_smarty_tpl)
 
     <div id="myBtnContainer" class="btnContainer">
         
-        <a href="index_smarty.php?page=page_filtree"> Afficher tout</a>
+        <a class="a_filtre" href="index_smarty.php?page=page_filtree"> Afficher tout</a>
         
         <div>
-            <p>Filtrez par meridien:</p> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> P</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=GI"> GI </a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=E"> E </a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=Rte"> Rte </a> <br>
-            <br>
+            <h2>Filtrez par Meridien <br>
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     P       </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=GI">    GI      </a>
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=E">     E       </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=Rte">   Rte     </a>
+            </h2> <br>
+
+            <br>    
+        </div>  
+
+        <div>   
+            <h2> Filtrez par Type <br>
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=me">   me      </a>     
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=mi">   mi      </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=lp">   lp      </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=lv">   lv      </a> 
+            </h2> <br>   
+
         </div>
 
         <div>
-            <p>Filtrez par type de pathologie:</p> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Meridien</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Organe/viscère</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Luo</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Merveilleux vaisseau</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Jing jin</a> <br>
-        </div>
+            <h2> Filtrez par Caracteristiques <br>
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Plein   </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Chaud   </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Vide    </a>
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Froid   </a> 
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Interne </a>
+                <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Externe </a>
+            </h2> <br>
 
-        <div>
-            <p>href="index_smarty.php?page=pagefiltree&filtre_mer=P" filtrez par les caracteristiques des pathologies:</p> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Plein</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Chaud</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Vide</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Froid</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Interne</a> <br>
-            <a href="index_smarty.php?page=page_filtree&filtre_mer=P"> Externe</a> <br> <br>
         </div>
 
     </div> 
 
-    <div class="apropos" id = "patho">
+    <div class="apropos">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pathos']->value, 'patho');
 $_smarty_tpl->tpl_vars['patho']->do_else = true;

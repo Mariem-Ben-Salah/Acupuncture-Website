@@ -41,11 +41,37 @@ $dbh = new PDO("pgsql:host=localhost;dbname=acudb",$user,$passwd);
 
 //-----------------------------------recuperer les Données Filtrées--------------------------------------------
 
+
+$sql_filtre = " SELECT * FROM pathos " ;
+
+$ok = TRUE;
+
+if(isset($_GET['filtre_mer'])){
+    $sql_filtre = $sql_filtre . "WHERE mer =" . $_GET['filtre_mer'] ;
+    $ok = FALSE;
+}
+
+if(isset($_GET['filtre_type'])){
+    if($ok){
+        $sql_filtre = $sql_filtre . "WHERE type =" . $_GET['filtre_type'] ;
+    }
+    else{
+        $sql_filtre = $sql_filtre . " AND type =" . $_GET['filtre_type'] ;
+    }
+}
+
+// $_GET['my_value'] = "test";
+
+$sql_filtre = $sql_filtre . ";" ;
+
+echo $sql_filtre;
+
+
 if(isset($_GET['filtre_mer'])){
 
-    $sql_filtre_mer =" SELECT * FROM patho WHERE mer = :codeMeridien ;";
+    $sql_filtre_mer =" SELECT * FROM patho WHERE mer = :code ;";
     $sth_filtre_mer = $dbh->prepare( $sql_filtre_mer );
-    $sth_filtre_mer->execute(array(':codeMeridien' => $_GET['filtre_mer']));
+    $sth_filtre_mer->execute(array(':code' => $_GET['filtre_mer']));
     $pathos = $sth_filtre_mer->fetchAll(PDO::FETCH_OBJ);
 }
 else {
@@ -57,6 +83,19 @@ else {
 
 $Smarty -> assign("pathos" , $pathos);
 
+
+// elseif(isset($_GET['filtre_type'])){
+//     $sql_filtre_type =" SELECT * FROM patho WHERE type = :code ;";
+//     $sth_filtre_type = $dbh->prepare( $sql_filtre_type );
+//     $sth_filtre_type->execute(array(':code' => $_GET['filtre_mer']));
+//     $pathos = $sth_filtre_type->fetchAll(PDO::FETCH_OBJ);
+// }
+// elseif(isset($_GET['filtre_symp'])){
+//     $sql_filtre_symp =" SELECT * FROM patho WHERE mer = :code ;";
+//     $sth_filtre_symp = $dbh->prepare( $sql_filtre_symp );
+//     $sth_filtre_symp -> execute(array(':code' => $_GET['filtre_mer']));
+//     $pathos = $sth_filtre_symp->fetchAll(PDO::FETCH_OBJ);
+// }
 
 
 
