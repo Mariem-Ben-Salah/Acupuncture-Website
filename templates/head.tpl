@@ -1,4 +1,4 @@
-<head onload="ville()">
+<head>
    
     <title>Les Acupuncteurs Lyonnais</title>
 
@@ -8,6 +8,6 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <div id="scroll_to_top"></div>
-
+    
 
 </head>

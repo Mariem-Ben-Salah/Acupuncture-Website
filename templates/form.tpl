@@ -11,14 +11,13 @@
 
 
 
-        <input type="checkbox" name="check" onclick="onlyOne(this)">
-        <input type="checkbox" name="check" onclick="onlyOne(this)">
-        <input type="checkbox" name="check" onclick="onlyOne(this)">
-        <input type="checkbox" name="check" onclick="onlyOne(this)">
-
+            <input type="checkbox" name="check" onclick="onlyOne(this)">
+            <input type="checkbox" name="check" onclick="onlyOne(this)">
+            <input type="checkbox" name="check" onclick="onlyOne(this)">
+            <input type="checkbox" name="check" onclick="onlyOne(this)">
             <br>
 
-            <button type="submit" name="mon_button"> mon_button </button>
+            <button type="submit" name="mon_button"> submit </button>
 
             <br>
 
