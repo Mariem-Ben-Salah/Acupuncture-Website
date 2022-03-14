@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-02-28 11:57:00
+/* Smarty version 4.1.0, created on 2022-03-14 18:35:32
   from '/var/www/html/SITE/templates/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_621caa7c6198b8_19035246',
+  'unifunc' => 'content_622f7ce473cd87_83621962',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1cc711dd99b3cd598436c4119d1c7c68dbe9b366' => 
     array (
       0 => '/var/www/html/SITE/templates/head.tpl',
-      1 => 1646045816,
+      1 => 1647279327,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_621caa7c6198b8_19035246 (Smarty_Internal_Template $_smarty_tpl) {
-?><head onload="ville()">
+function content_622f7ce473cd87_83621962 (Smarty_Internal_Template $_smarty_tpl) {
+?><head>
    
     <title>Les Acupuncteurs Lyonnais</title>
 
@@ -34,7 +34,7 @@ function content_621caa7c6198b8_19035246 (Smarty_Internal_Template $_smarty_tpl)
 >
 
     <div id="scroll_to_top"></div>
-
+    
 
 </head><?php }
 }

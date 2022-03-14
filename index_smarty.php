@@ -64,7 +64,7 @@ if(isset($_GET['filtre_type'])){
 
 $sql_filtre = $sql_filtre . ";" ;
 
-echo $sql_filtre;
+//echo $sql_filtre;
 
 
 if(isset($_GET['filtre_mer'])){
@@ -82,6 +82,10 @@ else {
 }
 
 $Smarty -> assign("pathos" , $pathos);
+
+
+if (isset($_POST['filtre_mer'])){$element = $_POST['filtre_mer'];
+    echo $element;}
 
 
 // elseif(isset($_GET['filtre_type'])){
@@ -115,5 +119,6 @@ if(isset($_GET['page'])){
 else {
     $Smarty -> display("templates/index.tpl");
 }
+
 
 ?>

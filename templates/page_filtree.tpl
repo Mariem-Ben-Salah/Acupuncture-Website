@@ -9,20 +9,22 @@
 
         <h1>PAGE FILTRE</h1>
 
-        <div id="myBtnContainer" class="btnContainer">
+        <form id="myBtnContainer" class="btnContainer" action="index_smarty.php?page=page_filtree" method="POST">
             
             <a class="a_filtre" href="index_smarty.php?page=page_filtree"> Afficher tout</a>
             
-            <div>
-                <h2>Filtrez par Meridien <br>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     P       </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=GI">    GI      </a>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=E">     E       </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=Rte">   Rte     </a>
-                </h2> <br>
+    
+            <h2>Filtrez par Meridien </h2>
+            <h4>P</h4>      
+            <input class ="P"   type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="P">  <br>   
+            <h4>GI</h4>     
+            <input class ="GI"  type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="GI">  <br>  
+            <h4>E</h4>      
+            <input class ="E"   type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="E">  <br>   
+            <h4>Rte</h4>    
+            <input class ="Rte" type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="Rte">  <br>  
 
-                <br>    
-            </div>  
+            <button type="submit" name="submit_button"> submit </button>
 
             <div>   
                 <h2> Filtrez par Type <br>
@@ -46,7 +48,7 @@
 
             </div>
 
-        </div> 
+        </form> 
 
         <div class="apropos">
 
@@ -60,4 +62,5 @@
         {include file='footer.tpl'}
 
     </body>
+    <script src="js/test_form.js"></script>
 </html>
