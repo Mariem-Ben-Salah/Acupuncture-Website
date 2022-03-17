@@ -1,5 +1,11 @@
 # Les acupuncteurs Lyonnais
 
+###Equipe : 
+GASRI Omar (CLBD)
+SCHURCK Alexandre	(ROSE)
+TAIDER Silia	(CLBD)
+BEN SALAH Mariem	(CLBD)
+
 ## Sur quoi on a avancé:
 
 Nous avons pas mal avancé sur notre site depuis la dernière fois, nous avons notamment travaillé sur les points suivants:
