@@ -1,19 +1,27 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Smarty version 4.1.0, created on 2022-03-17 10:08:51
 =======
 /* Smarty version 4.1.0, created on 2022-03-17 09:30:01
 >>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
+=======
+/* Smarty version 4.1.0, created on 2022-03-17 11:25:28
+>>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
   from '/var/www/html/SITE/templates/page_filtree.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
 <<<<<<< HEAD
+<<<<<<< HEAD
   'unifunc' => 'content_6232faa3b48418_93983208',
 =======
   'unifunc' => 'content_6232f189f0a5e4_51539680',
 >>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
+=======
+  'unifunc' => 'content_62330c98006970_80958630',
+>>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,10 +29,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     array (
       0 => '/var/www/html/SITE/templates/page_filtree.tpl',
 <<<<<<< HEAD
+<<<<<<< HEAD
       1 => 1647285255,
 =======
       1 => 1647505258,
 >>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
+=======
+      1 => 1647511597,
+>>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
       2 => 'file',
     ),
   ),
@@ -36,10 +48,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
 ),false)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 function content_6232faa3b48418_93983208 (Smarty_Internal_Template $_smarty_tpl) {
 =======
 function content_6232f189f0a5e4_51539680 (Smarty_Internal_Template $_smarty_tpl) {
 >>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
+=======
+function content_62330c98006970_80958630 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -87,17 +103,17 @@ function content_6232f189f0a5e4_51539680 (Smarty_Internal_Template $_smarty_tpl)
             <h2> Filtrez par Caracteristiques </h2>
             <br>
             Plein     
-            <input class ="P"   type="checkbox"  name="filtre_type" value="p">  <br>    
-            Chaud   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="c">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_p" value="p">  <br>    
             Vide   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="v">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_v" value="v">  <br>   
             Froid    
-            <input class ="P"   type="checkbox"  name="filtre_type" value="f">  <br>    
+            <input class ="P"   type="checkbox"  name="filtre_car_f" value="f">  <br>    
+            Chaud   
+            <input class ="P"   type="checkbox"  name="filtre_car_c" value="c">  <br>   
             Interne   
-            <input class ="P"   type="checkbox"  name="filtre_type"  value="i">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_i"  value="i">  <br>   
             Externe  
-            <input class ="P"   type="checkbox"  name="filtre_type"  value="e">  <br> 
+            <input class ="P"   type="checkbox"  name="filtre_car_e"  value="e">  <br> 
             <br>
 
 
