@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-02-28 11:24:13
+/* Smarty version 4.1.0, created on 2022-03-14 20:11:21
   from '/var/www/html/SITE/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_621ca2cd2414a0_04374447',
+  'unifunc' => 'content_622f9359012de6_18039702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6df8e8dbad4148c37422ccd46c598635989cd043' => 
     array (
       0 => '/var/www/html/SITE/templates/index.tpl',
-      1 => 1646041874,
+      1 => 1647285071,
       2 => 'file',
     ),
   ),
@@ -23,22 +23,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_621ca2cd2414a0_04374447 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622f9359012de6_18039702 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
     
   <?php $_smarty_tpl->_subTemplateRender('file:head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-  <body onload="appelAPI()">
+  <body>
 
     <?php $_smarty_tpl->_subTemplateRender('file:menu.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     
-
-    <h1 id="destination">Les Acupuncteurs Lyonnais</h1>
-
-    <h2>Consultez les symptômes des principales pathologies traitées chez nous: </h2>
+    <p id="phrase">Consultez les symptômes des principales pathologies traitées chez nous: </p>
 
     <div class="apropos" id = "patho">
         

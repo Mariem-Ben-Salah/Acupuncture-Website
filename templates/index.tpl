@@ -3,14 +3,11 @@
     
   {include file='head.tpl'}
 
-  <body onload="appelAPI()">
+  <body>
 
     {include file='menu.tpl'}
     
-
-    <h1 id="destination">Les Acupuncteurs Lyonnais</h1>
-
-    <h2>Consultez les symptômes des principales pathologies traitées chez nous: </h2>
+    <p id="phrase">Consultez les symptômes des principales pathologies traitées chez nous: </p>
 
     <div class="apropos" id = "patho">
         
