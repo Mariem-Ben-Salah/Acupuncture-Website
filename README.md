@@ -19,6 +19,3 @@ Nous avons pas mal avancé sur notre site depuis la dernière fois, nous avons n
 
 ![image](https://user-images.githubusercontent.com/69010419/158897993-174c7b6f-7f76-4d11-9e7f-e3fe1d414189.png)
 
-![image](https://user-images.githubusercontent.com/69010419/158898043-cba0c662-dbfb-4aa6-9759-8197457c8271.png)
-
-![image](https://user-images.githubusercontent.com/69010419/158898098-e9591f0e-ec3f-4ed1-a232-db2ef8dec881.png)
