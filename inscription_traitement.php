@@ -6,6 +6,7 @@
     {
         // Patch XSS
         $pseudo = htmlspecialchars($_POST['pseudo']);
+        $_SESSION['pseudo'] = $pseudo;
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['password_retype']);

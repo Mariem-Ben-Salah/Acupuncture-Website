@@ -44,22 +44,22 @@
    
         <!-- Modal -->
         <?php
-      session_start();
+      
       if(isset($_SESSION['user']))
       {
-      ?>
-       <form class=chatform method="post" action="changer_mdp.php">
-      <p>
-      <label for="password">Votre nouveau mot de passe :</label><input type="password" name="password" id="password" required/>
-      <br/>
-      <label for="password">Retapez votre nouveau mot de passe :</label><input type="password" name="password_retype" id="password_retype" required/>
-      <br/>
-     <input type="submit" value="Changer mon mot de passe">
-     </form>
-     <?php
+        ?>
+        <form class=chatform method="post" action="changer_mdp.php">
+        <p>
+        <label for="user">Votre nouveau mot de passe :</label><input type="password" name="password" id="password" required/>
+        <br/>
+        <label for="userconfirm">Retapez votre nouveau mot de passe :</label><input type="password" name="password_retype" id="password_retype" required/>
+        <br/>
+        <input type="submit" value="Changer mon mot de passe">
+        </form>
+        <?php
      }
      else{
-      echo '<p>Vous devez être connecté pour pouvoir changer votre mot de passe !</p>';
+        echo '<p>Vous devez être connecté pour pouvoir changer votre mot de passe !</p>';
      }
      ?>       
     <!-- Optional JavaScript -->
