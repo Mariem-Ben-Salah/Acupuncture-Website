@@ -3,7 +3,7 @@
     
   {include file='head.tpl'}
 
-  <body class = "corps">
+  <body id = "corps">
 
     {include file='menu.tpl'}
     
