@@ -8,13 +8,14 @@ if ($_POST['password']==$_POST['password_retype'])
 {
 
     $email = $_SESSION['email'];
-
-    echo $email; 
-    $pass_hache=$_POST['password'];
+    echo $email."         ";
+    $cost = ['cost' => 12];
+    $pass_hache = password_hash($_POST['password'], PASSWORD_BCRYPT, $cost);
+    echo $pass_hache;
     $req = $bdd->prepare('UPDATE utilisateurs SET password=? WHERE email = ?');
     $req->execute(array(
-    'pwd ' => $_POST['password'],
-    'mail' => $email
+    $pass_hache,
+    $email
     ));
     
     echo '<p>La modification de mot de passe a été prise en compte ! Déconnectez-vous et reconnectez-vous afin de valider ce changement.</p><br/>';
