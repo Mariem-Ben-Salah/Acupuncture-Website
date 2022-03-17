@@ -10,6 +10,14 @@ $Smarty->setCompileDir('templates_c/');
 $Smarty->setConfigDir('configs/');
 $Smarty->setCacheDir('cache/');
 
+// -----------------------------------PHP dans tpl------------------------------------------
+session_start();
+$Smarty -> assign('issetUsr',isset($_SESSION['user']) );
+
+$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+$req->execute(array($_SESSION['user']));
+$data = $req->fetch();
+$Smarty -> assign ('msg_co',  $data['pseudo']);
 
 //----------------------------------connection BD--------------------------------------------
 
@@ -38,48 +46,7 @@ $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
 
 //-----------------------------------recuperer les Données Filtrées--------------------------------------------
 
-
-
-<<<<<<< HEAD
-if(isset($_GET['filtre_mer'])){
-    $sql_filtre = $sql_filtre . "WHERE mer =" . $_GET['filtre_mer'] ;
-    $ok = FALSE;
-}
-
-if(isset($_GET['filtre_type'])){
-    if($ok){
-        $sql_filtre = $sql_filtre . "WHERE type =" . $_GET['filtre_type'] ;
-    }
-    else{
-        $sql_filtre = $sql_filtre . " AND type =" . $_GET['filtre_type'] ;
-    }
-}
-
-// $_GET['my_value'] = "test";
-
-$sql_filtre = $sql_filtre . ";" ;
-
-//echo $sql_filtre;
-
-
-if(isset($_GET['filtre_mer'])){
-
-    $sql_filtre_mer =" SELECT * FROM patho WHERE mer = :code ;";
-    $sth_filtre_mer = $dbh->prepare( $sql_filtre_mer );
-    $sth_filtre_mer->execute(array(':code' => $_GET['filtre_mer']));
-    $pathos = $sth_filtre_mer->fetchAll(PDO::FETCH_OBJ);
-}
-else {
-    $sql =" SELECT * FROM patho ;";
-    $sth = $dbh->prepare( $sql );
-    $sth->execute();
-    $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
-}
-
-$sql_filtre = " SELECT * FROM pathos " ;
-=======
 $sql_filtre = " SELECT * FROM patho " ;
->>>>>>> 548b9d1edef68f265906fd703012cbf1b8ea6367
 
 $ok = isset($_POST['filtre_mer']);
 $ok2 = isset($_POST['filtre_type']);
@@ -133,13 +100,7 @@ $pathos = $sth_filtre->fetchAll(PDO::FETCH_OBJ);
 $Smarty -> assign("pathos" , $pathos);
 
 //var_dump($pathos);
-session_start();
-$Smarty -> assign('issetUsr',isset($_SESSION['user']) );
 
-$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-$req->execute(array($_SESSION['user']));
-$data = $req->fetch();
-$Smarty -> assign ('msg_co',  $data['pseudo']);
 
 if(isset($_GET['page'])){
     if ($_GET['page']=="index"): 

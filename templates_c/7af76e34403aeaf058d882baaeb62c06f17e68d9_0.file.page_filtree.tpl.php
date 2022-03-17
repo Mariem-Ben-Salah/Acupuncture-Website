@@ -1,42 +1,18 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Smarty version 4.1.0, created on 2022-03-17 10:08:51
-=======
-/* Smarty version 4.1.0, created on 2022-03-17 09:30:01
->>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
-=======
-/* Smarty version 4.1.0, created on 2022-03-17 11:25:28
->>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
+/* Smarty version 4.1.0, created on 2022-03-17 12:17:16
   from '/var/www/html/SITE/templates/page_filtree.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'unifunc' => 'content_6232faa3b48418_93983208',
-=======
-  'unifunc' => 'content_6232f189f0a5e4_51539680',
->>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
-=======
-  'unifunc' => 'content_62330c98006970_80958630',
->>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
+  'unifunc' => 'content_623318bcd55379_58220091',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7af76e34403aeaf058d882baaeb62c06f17e68d9' => 
     array (
       0 => '/var/www/html/SITE/templates/page_filtree.tpl',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      1 => 1647285255,
-=======
-      1 => 1647505258,
->>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
-=======
-      1 => 1647511597,
->>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
+      1 => 1647515467,
       2 => 'file',
     ),
   ),
@@ -47,15 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-function content_6232faa3b48418_93983208 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_6232f189f0a5e4_51539680 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
-=======
-function content_62330c98006970_80958630 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> b14235c9b6b9f99c5f25e9eb2ed0e3d0df69ce2c
+function content_623318bcd55379_58220091 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 

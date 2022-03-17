@@ -39,22 +39,9 @@
                             }
                         }
                     ?>
-
-
-                <div class="text-center">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#change_password">
-                          Changer mon mot de passe
-                        </button>
-                </div>
             </div>
         </div>    
-
-       
-
-        
-
-                                
+   
         <!-- Modal -->
         <div class="modal fade" id="change_password" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
             <div class="modal-dialog" role="document">
