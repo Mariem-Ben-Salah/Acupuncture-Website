@@ -24,5 +24,11 @@
         {include file='footer.tpl'}
 
     </body>
-
+    <style>
+    body{
+        padding:20px;
+        margin:20px;
+        text-align: center;
+    }
+    </style>
 </html>
