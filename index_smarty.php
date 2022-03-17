@@ -18,11 +18,12 @@ session_start();
 $Smarty -> assign('issetUsr',isset($_SESSION['user']) );
 
 // envoyer le msg_co qui est le nom de l'untilisateur connecté et l'afficher dans menu.tpl
-$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-$req ->execute($_SESSION['user']);
-$data = $req->fetch();
-$Smarty -> assign ('msg_co',  $data['pseudo']);
-
+if (isset($_SESSION['user']) ) {
+    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+    $req ->execute(array($_SESSION['user']));
+    $data = $req->fetch();
+    $Smarty -> assign ('msg_co', $data['pseudo']);
+}
 
 //----------------------------------connection BD--------------------------------------------
 
