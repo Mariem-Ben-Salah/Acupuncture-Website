@@ -27,7 +27,7 @@
         <li><a href="/SITE/connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
         <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
       {/if}
-      <li>    <a href="/SITE/index_smarty.php?page=Contact" >        Contact                 </a>    </li>
+      <li>    <a href="/SITE/index_smarty.php?page=Contact" >        Contact</a>    </li>
     </ul>
   </div>
 </nav>  
