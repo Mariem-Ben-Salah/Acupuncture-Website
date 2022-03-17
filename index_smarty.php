@@ -56,6 +56,21 @@ $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
 
 //------------------- Filtres multiples ( mer, type, caracteristiques ) --------------------------------------------
 
+//obtenir les differents meridiens pour les afficher dans la page et filtrer d'eux
+$sql_mer = "SELECT mer from patho";
+$sth_mer = $dbh->prepare( $sql_mer );
+$sth_mer->execute();
+$meridiens = $sth_mer->fetchAll(PDO::FETCH_OBJ);
+
+$les_meridiens = array_column($meridiens, 'mer');
+$uniq_mer = array_unique($les_meridiens);
+
+//var_dump($uniq_mer);
+
+$Smarty -> assign('meridiens',$uniq_mer);
+
+//on commence le filtrage à l'aide de la form avec la methode POST
+
 // on initialise la requete qu'on va y ajouter à la fin les WHERE ..
 $sql_filtre = " SELECT * FROM patho " ;
 
@@ -63,51 +78,67 @@ $sql_filtre = " SELECT * FROM patho " ;
 $isset_mer = isset($_POST['filtre_mer']);
 $isset_type = isset($_POST['filtre_type']);
 
-if(isset($_POST['filtre_mer'])){
-    $sql_filtre = $sql_filtre . "WHERE mer = " . "'". $_POST['filtre_mer']. "'" ;
+//initialiser le array qu'on va passer a execute
+$array_execute=array();
+
+if($isset_mer){
+    $sql_filtre = $sql_filtre . "WHERE mer = :codeMer" ;
+    $array_execute['codeMer'] = $_POST['filtre_mer'];
 }
 
-if(isset($_POST['filtre_type'])){
+if($isset_type){
+    $array_execute['codeType'] = "'%".$_POST['filtre_type']."'";
     if($isset_mer){
-        $sql_filtre = $sql_filtre . " AND type LIKE '%" . $_POST['filtre_type'] ."'" ;
+        $sql_filtre = $sql_filtre . " AND type LIKE :codeType" ;
     }
     else{
-        $sql_filtre = $sql_filtre . " WHERE type LIKE '%" . $_POST['filtre_type'] ."'" ;
+        $sql_filtre = $sql_filtre . " WHERE type LIKE :codeType" ;
     }
 }
 
 $List_cara=array();
 
-if (isset($_POST['filtre_car_p'])){array_push($List_cara, $_POST['filtre_car_p']);}
-if (isset($_POST['filtre_car_v'])){array_push($List_cara, $_POST['filtre_car_v']);}
-if (isset($_POST['filtre_car_f'])){array_push($List_cara, $_POST['filtre_car_f']);}
-if (isset($_POST['filtre_car_c'])){array_push($List_cara, $_POST['filtre_car_c']);}
-if (isset($_POST['filtre_car_i'])){array_push($List_cara, $_POST['filtre_car_i']);}
-if (isset($_POST['filtre_car_e'])){array_push($List_cara, $_POST['filtre_car_e']);}
+if (isset($_POST['filtre_car_p'])){$cara=$_POST['filtre_car_p'];array_push($List_cara, $cara);$array_execute['code_p'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_v'])){$cara=$_POST['filtre_car_v'];array_push($List_cara, $cara);$array_execute['code_v'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_f'])){$cara=$_POST['filtre_car_f'];array_push($List_cara, $cara);$array_execute['code_f'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_c'])){$cara=$_POST['filtre_car_c'];array_push($List_cara, $cara);$array_execute['code_c'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_i'])){$cara=$_POST['filtre_car_i'];array_push($List_cara, $cara);$array_execute['code_i'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_e'])){$cara=$_POST['filtre_car_e'];array_push($List_cara, $cara);$array_execute['code_e'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_s'])){$cara=$_POST['filtre_car_s'];array_push($List_cara, $cara);$array_execute['code_s'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_yin'])){$cara=$_POST['filtre_car_yin'];array_push($List_cara, $cara);$array_execute['code_yin'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_yang'])){$cara=$_POST['filtre_car_yang'];array_push($List_cara, $cara);$array_execute['code_yang'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_m'])){$cara=$_POST['filtre_car_m'];array_push($List_cara, $cara);$array_execute['code_m'] = "'%".$cara."%'";}
+if (isset($_POST['filtre_car_a'])){$cara=$_POST['filtre_car_a'];array_push($List_cara, $cara);$array_execute['code_a'] = "'%".$cara."%'";}
 
 
 if(!empty($List_cara)){
     if($isset_type or $isset_mer){
         foreach ($List_cara as $cara ){
-            $sql_filtre = $sql_filtre . " AND type LIKE '%" . $cara . "%'";
+            $sql_filtre = $sql_filtre . " AND type LIKE :code_".$cara." ";
+            $code_cara = $cara;
         }
 
     }
     else {
         foreach ($List_cara as $cara ){
-            $sql_filtre = $sql_filtre . " WHERE type LIKE '%" . $cara . "%'";
+            $sql_filtre = $sql_filtre . " WHERE type LIKE :code_".$cara." ";
+            $code_cara = $cara;
         }
 
     }
 }
 
+
 $sql_filtre = $sql_filtre . ";";
+//echo $sql_filtre;
+//var_dump($array_execute);
 
 // echo $sql_filtre; //on obtient une requete de type :
 // SELCT * FROM patho WHERE mer = 'P' AND type LIKE 'tf%' AND type LIKE '%plein%' ; 
 
 $sth_filtre = $dbh->prepare( $sql_filtre );
-$sth_filtre->execute();
+if($isset_mer){}
+$sth_filtre->execute($array_execute);
 $pathos = $sth_filtre->fetchAll(PDO::FETCH_OBJ);
 
 //var_dump($pathos);
