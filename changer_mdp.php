@@ -7,6 +7,7 @@ if ($_POST['password']==$_POST['password_retype'])
 {
 
     $email = $_SESSION['email'];
+    
     echo $email; 
     $pass_hache=$_POST['password'];
     $req = $bdd->prepare('UPDATE utilisateurs SET password=? WHERE email = ?');
