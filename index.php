@@ -5,100 +5,126 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="author" content="NoS1gnal"/>
 
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-            <link rel="stylesheet" href="/css/style.css">
+            <link rel="stylesheet" href="/SITE/css/style.css">
             <title>Connexion</title>
         </head>
         <body>
-        
-        <div class="login-form">
-             <?php 
-                if(isset($_GET['login_err']))
-                {
-                    $err = htmlspecialchars($_GET['login_err']);
-
-                    switch($err)
+            <div class="login-form">
+                <?php 
+                    if(isset($_GET['login_err']))
                     {
-                        case 'password':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> mot de passe incorrect
-                            </div>
-                        <?php
-                        break;
+                        $err = htmlspecialchars($_GET['login_err']);
 
-                        case 'email':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> email incorrect
-                            </div>
-                        <?php
-                        break;
+                        switch($err)
+                        {
+                            case 'password':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> mot de passe incorrect
+                                </div>
+                            <?php
+                            break;
 
-                        case 'already':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> compte non existant
-                            </div>
-                        <?php
-                        break;
+                            case 'email':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> email incorrect
+                                </div>
+                            <?php
+                            break;
+
+                            case 'already':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> compte non existant
+                                </div>
+                            <?php
+                            break;
+                        }
                     }
-                }
-                ?> 
-            
-            <form action="connexion.php" method="post">
-                <h2 class="text-center">Connexion</h2>       
-                <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Connexion</button>
-                </div>   
-            </form>
-            <p class="text-center"><a href="inscription.php">Inscription</a></p>
-        </div>
+                    ?> 
+                
+                <form action="connexion.php" method="post">
+
+                    <h6>Connexion</h6> 
+
+                    <div class="imgcontainer">
+                        <img src="images/avatar_cnx.png" alt="Avatar" class="avatar">
+                    </div>  
+                    
+                    <div class="form-container">
+                        <label for="email"><b>Email</b></label>
+                        </br>
+                        <input type="email" name="email" placeholder="Email" required="required" autocomplete="off">
+                        </br>
+                        <label for="psw"><b>Mot de passe</b></label>
+                        </br>
+                        <input type="password" name="password" placeholder="Mot de passe" required="required" autocomplete="off">
+                        </br>
+                        <button type="submit">Connexion</button>
+                    </div>  
+                    <div class="form-container" style="background-color:#f1f1f1">
+                        <button type="submit"><a class="botton-inscription" href="inscription.php">Inscription</a></button>
+                    </div>
+
+                </form>
+            </div>
+        </body>
 
 
         <style>
-            .login-form {
-                font-size: 100%; 
-                padding: 5%;
-                font-family: lato;
-                font-weight: 400;
-                background-color:#4CAF50;
+            body{
+                background-color: rgba(112, 111, 111, 0.966);
+            }
+            form {
+                border: 3px solid black;
+                margin: 5% 30%;
+                background-color: white;
+            }
+            input[type=email], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: black;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+            .botton-inscription{
                 text-align: center;
-                margin: 15% auto; 
-                border: 50% solid #013220;
-                width: 35%; 
-                border-radius: 5%;
-                padding-bottom: 2%;
+                background-color: black;
+                color: white;
             }
-            .login-form form {
-                margin-bottom: 15px;
-                background: #f7f7f7;
-                color:  #130e3b
-                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-                padding: 30px;
+            .imgcontainer {
+                text-align: center;
+                margin: 2px 0 2px 0;
             }
-            .login-form h2 {
-                margin: 0 0 15px;
-                font: lato;
-                color: #013220;
+            img.avatar {
+                margin-top: 3%;
+                width: 10%;
+                height: 10%;
             }
-            .form-control, .btn {
-                min-height: 38px;
-                border-radius: 2px;
+            .form-container {
+                padding: 5% 30% ;
             }
-            .btn {        
-                font-size: 15px;
-                font-weight: bold;
+            h6{
+                text-align: center;
+                font-size: 150%
             }
 
         </style>
   
 
-        </body>
+        
 </html>

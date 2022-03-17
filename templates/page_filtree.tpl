@@ -43,17 +43,17 @@
             <h2> Filtrez par Caracteristiques </h2>
             <br>
             Plein     
-            <input class ="P"   type="checkbox"  name="filtre_type" value="p">  <br>    
-            Chaud   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="c">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_p" value="p">  <br>    
             Vide   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="v">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_v" value="v">  <br>   
             Froid    
-            <input class ="P"   type="checkbox"  name="filtre_type" value="f">  <br>    
+            <input class ="P"   type="checkbox"  name="filtre_car_f" value="f">  <br>    
+            Chaud   
+            <input class ="P"   type="checkbox"  name="filtre_car_c" value="c">  <br>   
             Interne   
-            <input class ="P"   type="checkbox"  name="filtre_type"  value="i">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_i"  value="i">  <br>   
             Externe  
-            <input class ="P"   type="checkbox"  name="filtre_type"  value="e">  <br> 
+            <input class ="P"   type="checkbox"  name="filtre_car_e"  value="e">  <br> 
             <br>
 
 
