@@ -5,22 +5,81 @@ html{
   background-attachment: scroll;
 }
 
-body{
-  background-color: #69c7c7;
+#corps{
+  background-color: #141313;
+}
+
+#phrase{ 
+  font-weight: bold;
+  font-size: large;
+  background:#7c7979;
+  text-align: center;
+  color: rgb(41, 39, 39);
+  margin: 5% 25%;
+  padding: 30px 30px 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:   #5d615e;
+  border-radius: 3%;
+}
+
+#patho{
+  background-color:rgb(250, 250, 250, 0.1);
+  padding: 0;
+  text-align: center;
+  margin: 3% 35%;
+  padding: 5%;
+}
+
+p{
+  color: rgb(104, 109, 109);
+  font-size: medium;
+}
+
+.liste h3{
+  font-size: 150%;
+  color:rgba(230, 228, 228, 0.966);
+}
+
+#corps h2{
+  font-weight: bold;
+  font-size: medium;
+  background:#313030;
+  text-align: center;
+  color: rgb(155, 150, 150);
+  border-style: solid;
+  border-width: 1px;
+  border-color:   #bac5bb;
+  border-radius: 5%;
+  margin: 0% 35%;
+  padding: 20px 50px 20px ;
+}
+
+.contact p{
+  background-color:rgb(250, 250, 250, 0.1);
+  padding: 0;
+  text-align: center;
+  margin: 3% 25%;
+  padding: 5%;
+  color: rgb(182, 172, 172);
+}
+
+.nosinfos p{
+  background-color:rgb(250, 250, 250, 0.1);
+  padding: 0;
+  text-align: center;
+  margin: 1% 35%;
+  padding: 1%;
 }
 
 .a_filtre {
   background-color:rgb(250, 250, 250);
-  color:rgba(112, 111, 111, 0.966);
+  color:rgba(32, 32, 32, 0.966);
   padding: 10px 20px;
   margin: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}
-
-p{
-  color: azure;
 }
 
 .navigation {
@@ -35,7 +94,6 @@ p{
   font-size: large;
   font-weight: 400;
 }
-
 
 .buttonPatho {
   background-color: whitesmoke; 
@@ -115,22 +173,6 @@ p{
   color: white;
 }
 
-.bonjour{
-  color: white;
-  width: 35%;
-}
-
-
-#phrase{ 
-  font-weight: 400;
-  background:#bebebe;
-  text-align: center;
-  color: rgb(0, 230, 69);
-  border-style: solid;
-  border-width: 1px;
-  margin-top: 110px;
-  padding: 30px 30px 30px;
-}
 
 h2{ 
   font-weight: bold;
@@ -187,7 +229,8 @@ footer{
   margin-left: 40%;
   margin-right: 40% ; 
   padding: 1% 5%;
-  background:#4CAF50;
+  background:#181818;
+  color:rgb(155, 150, 150);
   text-align: center;
   border-radius: 5%;
 }

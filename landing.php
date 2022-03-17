@@ -43,64 +43,75 @@
         </div>    
    
         <!-- Modal -->
-        <div class="modal fade" id="change_password" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Changer mon mot de passe</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                         </div>
-                            <div class="modal-body">
-                                <form action="layouts/change_password.php" method="POST">
-                                    <label for='current_password'>Mot de passe actuel</label>
-                                    <input type="password" id="current_password" name="current_password" class="form-control" required/>
-                                    <br />
-                                    <label for='new_password'>Nouveau mot de passe</label>
-                                    <input type="password" id="new_password" name="new_password" class="form-control" required/>
-                                    <br />
-                                    <label for='new_password_retype'>Re tapez le nouveau mot de passe</label>
-                                    <input type="password" id="new_password_retype" name="new_password_retype" class="form-control" required/>
-                                    <br />
-                                    <button type="submit" class="btn btn-success">Sauvegarder</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="modal fade" id="avatar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Changer mon avatar</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="layouts/change_avatar.php" method="POST" enctype="multipart/form-data">
-                                <label for="avatar">Images autorisées : png, jpg, jpeg, gif - max 20Mo</label>
-                                <input type="file" name="avatar_file">
-                                <br />
-                                <button type="submit" class="btn btn-success">Modifier</button>
-                            </form>
-                        </div>
-                        <br />
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <?php
+      session_start();
+      if(isset($_SESSION['user']))
+      {
+      ?>
+       <form class=chatform method="post" action="changer_mdp.php">
+      <p>
+      <label for="password">Votre nouveau mot de passe :</label><input type="password" name="password" id="password" required/>
+      <br/>
+      <label for="password">Retapez votre nouveau mot de passe :</label><input type="password" name="password_retype" id="password_retype" required/>
+      <br/>
+     <input type="submit" value="Changer mon mot de passe">
+     </form>
+     <?php
+     }
+     else{
+      echo '<p>Vous devez être connecté pour pouvoir changer votre mot de passe !</p>';
+     }
+     ?>       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <style>
+            body{
+                background-color: rgba(112, 111, 111, 0.966);
+            }
+            form {
+                border: 3px solid black;
+                margin: 5% 30%;
+                background-color: white;
+            }
+            input[type=email], input[type=password], input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: black;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+            .botton-connexion{
+                text-align: center;
+                background-color: black;
+                color: white;
+            }
+            .form-container {
+                padding: 5% 30% ;
+            }
+            h3{
+                text-align: center;
+                font-size: 150%
+            }
+
+        </style>
+        </body>
   </body>
 </html>

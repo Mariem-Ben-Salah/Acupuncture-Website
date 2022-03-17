@@ -24,10 +24,10 @@
       </li>
           <li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
       {else}
-        <li><a href="/SITE/connexion.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/SITE/connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+        <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
       {/if}
-      <li>    <a href="/SITE/index_smarty.php?page=Contact" >        Contact                 </a>    </li>
+      <li>    <a href="/SITE/index_smarty.php?page=Contact" >        Contact</a>    </li>
     </ul>
   </div>
 </nav>  

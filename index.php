@@ -74,12 +74,12 @@
 
         <style>
             body{
-                background-color: rgba(112, 111, 111, 0.966);
+                background-color: #141313;
             }
             form {
                 border: 3px solid black;
                 margin: 5% 30%;
-                background-color: white;
+                background-color: rgb(104, 109, 109);
             }
             input[type=email], input[type=password] {
                 width: 100%;
