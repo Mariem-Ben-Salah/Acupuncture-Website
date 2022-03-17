@@ -7,6 +7,7 @@ require_once 'config.php'; // On inclu la connexion à la bdd
 if ($_POST['password']==$_POST['password_retype'])
 {
     $email = htmlspecialchars($_POST['email']); 
+    
     $email = strtolower($email);
     echo "email :".$email . "   ,   ";
     echo "password : ".$_POST['password'] . "     ,     ";
