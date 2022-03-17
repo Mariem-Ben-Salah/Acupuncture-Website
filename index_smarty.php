@@ -1,6 +1,7 @@
 <?php
 // Note : Smarty a un 'S' majuscule
 require_once("smarty-4.1.0/libs/Smarty.class.php");
+require_once 'config.php'; // ajout connexion bdd 
 
 $Smarty = new Smarty();
 
@@ -77,12 +78,6 @@ else {
     $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
 }
 
-
-
-
-
-
-
 $sql_filtre = " SELECT * FROM pathos " ;
 
 $ok = isset($_POST['filtre_mer']);
@@ -131,6 +126,13 @@ $Smarty -> assign("pathos" , $pathos);
 
 
 //var_dump($pathos);
+session_start();
+$Smarty -> assign('issetUsr',isset($_SESSION['user']) );
+
+$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+$req->execute(array($_SESSION['user']));
+$data = $req->fetch();
+$Smarty -> assign ('msg_co',  $data['pseudo']);
 
 if(isset($_GET['page'])){
     if ($_GET['page']=="index"): 
@@ -148,4 +150,6 @@ else {
 }
 
 
+
 ?>
+

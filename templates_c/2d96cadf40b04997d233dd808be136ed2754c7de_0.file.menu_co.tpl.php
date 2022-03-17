@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-17 12:09:50
-  from '/var/www/html/SITE/templates/menu.tpl' */
+/* Smarty version 4.1.0, created on 2022-03-17 10:59:26
+  from '/var/www/html/SITE/templates/menu_co.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_623316fe0e4c89_29199902',
+  'unifunc' => 'content_6233067e6861c9_55586241',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c6df84bd49ea37955131f1ee751d78613e9ccd87' => 
+    '2d96cadf40b04997d233dd808be136ed2754c7de' => 
     array (
-      0 => '/var/www/html/SITE/templates/menu.tpl',
-      1 => 1647515387,
+      0 => '/var/www/html/SITE/templates/menu_co.tpl',
+      1 => 1647510180,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_623316fe0e4c89_29199902 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6233067e6861c9_55586241 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div >
 
 <nav class="navbar navbar-inverse">
@@ -34,14 +34,11 @@ function content_623316fe0e4c89_29199902 (Smarty_Internal_Template $_smarty_tpl)
       <li>    <a href="/SITE/index_smarty.php?page=mot_clef" >       Recherche par mot-clef  </a>    </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <?php if ($_smarty_tpl->tpl_vars['issetUsr']->value) {?>
-        <li > <a>Bonjour <?php echo $_smarty_tpl->tpl_vars['msg_co']->value;?>
-</a></li>
-        <li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
-      <?php } else { ?>
-        <li><a href="/SITE/connexion.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <?php }?>
+      <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
+      <h1 class="p-5">Bonjour <?php echo '<?php'; ?>
+ echo $data['pseudo']; <?php echo '?>'; ?>
+ !</h1>
       <li>    <a href="/SITE/index_smarty.php?page=Contact" >        Contact                 </a>    </li>
     </ul>
   </div>

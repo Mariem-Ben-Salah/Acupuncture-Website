@@ -11,13 +11,9 @@
       <li>    <a href="/SITE/index_smarty.php?page=mot_clef" >       Recherche par mot-clef  </a>    </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      {if $issetUsr}
-        <li > <a>Bonjour {$msg_co}</a></li>
-        <li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
-      {else}
-        <li><a href="/SITE/connexion.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      {/if}
+      <li><a href="/SITE/inscription.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
+      
       <li>    <a href="/SITE/index_smarty.php?page=Contact" >        Contact                 </a>    </li>
     </ul>
   </div>
