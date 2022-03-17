@@ -12,7 +12,7 @@
 --
 -- Base de données: `acudb`
 --
--- USE acudb;
+-- USE acudb;http://localhost:3080/pgadmin4/
 
 -- --------------------------------------------------------
 
