@@ -1,6 +1,6 @@
 # Les acupuncteurs Lyonnais
 
-###Equipe : 
+### Equipe : 
 GASRI Omar (CLBD)
 SCHURCK Alexandre	(ROSE)
 TAIDER Silia	(CLBD)
@@ -20,7 +20,6 @@ Nous avons pas mal avancé sur notre site depuis la dernière fois, nous avons n
 
 ## Sur quoi on bloque:
 
-* Quand un utilisateur se connecte, et essaie de changer son mot de passe, la BDD détecte bien le changement, mais il n'arrive pas à se reconnecter avec le nouveau mot de passe.
 * Le filtre par mot clef est bien fonctionnel et fait ce qu'on a voulu faire ( trouver les idk, trouver les ids qui leur correspendent, trouver les idp qui correspendent aux ids et enfin afficher les patho des idp), et ce que fait le filtre est identique à ce qu'on fait à la main. Mais le problème c'est que si on saisie un mot, la desc du patho affiché n'est pas cohérente.
 
 ## A quoi ressemble notre site:
