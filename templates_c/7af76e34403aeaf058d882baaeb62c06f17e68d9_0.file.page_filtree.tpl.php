@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.1.0, created on 2022-03-17 10:08:51
+=======
+/* Smarty version 4.1.0, created on 2022-03-17 09:30:01
+>>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
   from '/var/www/html/SITE/templates/page_filtree.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
+<<<<<<< HEAD
   'unifunc' => 'content_6232faa3b48418_93983208',
+=======
+  'unifunc' => 'content_6232f189f0a5e4_51539680',
+>>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7af76e34403aeaf058d882baaeb62c06f17e68d9' => 
     array (
       0 => '/var/www/html/SITE/templates/page_filtree.tpl',
+<<<<<<< HEAD
       1 => 1647285255,
+=======
+      1 => 1647505258,
+>>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
       2 => 'file',
     ),
   ),
@@ -23,7 +35,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_6232faa3b48418_93983208 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6232f189f0a5e4_51539680 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> 9af2163ee3b96ff3c248100a26ef5b21537b8891
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -71,17 +87,17 @@ function content_6232faa3b48418_93983208 (Smarty_Internal_Template $_smarty_tpl)
             <h2> Filtrez par Caracteristiques </h2>
             <br>
             Plein     
-            <input class ="P"   type="checkbox"  name="filtre_type" value="me">  <br>    
+            <input class ="P"   type="checkbox"  name="filtre_type" value="p">  <br>    
             Chaud   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="mi">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_type" value="c">  <br>   
             Vide   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="lp">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_type" value="v">  <br>   
             Froid    
-            <input class ="P"   type="checkbox"  name="filtre_type" value="lv">  <br>    
+            <input class ="P"   type="checkbox"  name="filtre_type" value="f">  <br>    
             Interne   
-            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="lp">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_type"  value="i">  <br>   
             Externe  
-            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="lv">  <br> 
+            <input class ="P"   type="checkbox"  name="filtre_type"  value="e">  <br> 
             <br>
 
 
