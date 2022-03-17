@@ -22,7 +22,7 @@ if ($_POST['password']==$_POST['password_retype'])
     echo '<p>La modification de mot de passe a été prise en compte ! Déconnectez-vous et reconnectez-vous afin de valider ce changement.</p><br/>';
     ?>
     <a href='index_smarty.php'>Retour à la page membre</a>
-
+    
 <?php
 }
 else{
