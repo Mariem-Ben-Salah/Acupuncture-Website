@@ -22,26 +22,22 @@ $dbh = new PDO("pgsql:host=localhost;dbname=acudb",$user,$passwd);
 
 
 
-//-----------------------------------recuperer les Données--------------------------------------------
+//----------------------------------recuperer les Données--------------------------------------------
 
-// //$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
-
-// $sql =" SELECT * FROM patho ;";
-
-// $sth = $dbh->prepare( $sql );
-// $sth->execute();
-// //$sth->execute(array(':codeMeridien' => 'P'));
-
-// //$pathos = $sth->fetchAll(PDO::FETCH_ASSOC);
-// $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
-
-// $Smarty -> assign("pathos" , $pathos);
+//$sql =" SELECT * FROM patho WHERE mer = :codeMeridien ; ";
+$sql =" SELECT * FROM patho ;";
+$sth = $dbh->prepare( $sql );
+$sth->execute();
+//$sth->execute(array(':codeMeridien' => 'P'));
+//$pathos = $sth->fetchAll(PDO::FETCH_ASSOC);
+$pathos = $sth->fetchAll(PDO::FETCH_OBJ);
+//$Smarty -> assign("pathos" , $pathos);
 
 
 
 //-----------------------------------recuperer les Données Filtrées--------------------------------------------
 
-
+/*
 $sql_filtre = " SELECT * FROM pathos " ;
 
 $ok = TRUE;
@@ -81,12 +77,43 @@ else {
     $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
 }
 
+
+
+
+
+
+
+$sql_filtre = " SELECT * FROM pathos " ;
+
+$ok = isset($_POST['filtre_mer']);
+$ok2 = isset($_POST['filtre_type']);
+
+if(isset($_POST['filtre_mer'])){
+    $sql_filtre = $sql_filtre . "WHERE mer =" . $_GET['filtre_mer'] ;
+}
+
+if(isset($_POST['filtre_type'])){
+    if($ok){
+        $sql_filtre = $sql_filtre . "WHERE type =" . $_GET['filtre_type'] ;
+    }
+    else{
+        $sql_filtre = $sql_filtre . " AND type =" . $_GET['filtre_type'] ;
+    }
+}
+
+
+
+if(isset($_POST['filtre_car'])){
+    if($ok2){
+
+    }
+}
+
+*/
+
+
+    
 $Smarty -> assign("pathos" , $pathos);
-
-
-if (isset($_POST['filtre_mer'])){$element = $_POST['filtre_mer'];
-    echo $element;}
-
 
 // elseif(isset($_GET['filtre_type'])){
 //     $sql_filtre_type =" SELECT * FROM patho WHERE type = :code ;";
