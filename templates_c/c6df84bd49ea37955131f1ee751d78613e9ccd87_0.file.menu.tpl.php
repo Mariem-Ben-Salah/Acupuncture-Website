@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-14 19:59:50
+/* Smarty version 4.1.0, created on 2022-03-17 10:06:39
   from '/var/www/html/SITE/templates/menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_622f90a6e92757_57180982',
+  'unifunc' => 'content_6232fa1f1046b1_69631902',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_622f90a6e92757_57180982 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6232fa1f1046b1_69631902 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div >
 
 <nav class="navbar navbar-inverse">
