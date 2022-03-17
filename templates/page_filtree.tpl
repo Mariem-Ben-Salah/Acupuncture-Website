@@ -60,7 +60,7 @@
             <button type="submit" name="submit_button"> submit </button>
         </form> 
 
-        <div class="apropos">
+        <div class="notre_class">
 
             {foreach $pathos AS $patho}
                 <h3> Patho n° {strval($patho->idp)} </h3>
