@@ -37,98 +37,60 @@ $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
 
 //-----------------------------------recuperer les Données Filtrées--------------------------------------------
 
-/*
-$sql_filtre = " SELECT * FROM pathos " ;
-
-$ok = TRUE;
-
-if(isset($_GET['filtre_mer'])){
-    $sql_filtre = $sql_filtre . "WHERE mer =" . $_GET['filtre_mer'] ;
-    $ok = FALSE;
-}
-
-if(isset($_GET['filtre_type'])){
-    if($ok){
-        $sql_filtre = $sql_filtre . "WHERE type =" . $_GET['filtre_type'] ;
-    }
-    else{
-        $sql_filtre = $sql_filtre . " AND type =" . $_GET['filtre_type'] ;
-    }
-}
-
-// $_GET['my_value'] = "test";
-
-$sql_filtre = $sql_filtre . ";" ;
-
-//echo $sql_filtre;
 
 
-if(isset($_GET['filtre_mer'])){
-
-    $sql_filtre_mer =" SELECT * FROM patho WHERE mer = :code ;";
-    $sth_filtre_mer = $dbh->prepare( $sql_filtre_mer );
-    $sth_filtre_mer->execute(array(':code' => $_GET['filtre_mer']));
-    $pathos = $sth_filtre_mer->fetchAll(PDO::FETCH_OBJ);
-}
-else {
-    $sql =" SELECT * FROM patho ;";
-    $sth = $dbh->prepare( $sql );
-    $sth->execute();
-    $pathos = $sth->fetchAll(PDO::FETCH_OBJ);
-}
-
-
-
-
-
-
-
-$sql_filtre = " SELECT * FROM pathos " ;
+$sql_filtre = " SELECT * FROM patho " ;
 
 $ok = isset($_POST['filtre_mer']);
 $ok2 = isset($_POST['filtre_type']);
 
 if(isset($_POST['filtre_mer'])){
-    $sql_filtre = $sql_filtre . "WHERE mer =" . $_GET['filtre_mer'] ;
+    $sql_filtre = $sql_filtre . "WHERE mer = " . $_POST['filtre_mer'] ;
 }
 
 if(isset($_POST['filtre_type'])){
     if($ok){
-        $sql_filtre = $sql_filtre . "WHERE type =" . $_GET['filtre_type'] ;
+        $sql_filtre = $sql_filtre . " AND type LIKE '%" . $_POST['filtre_type'] ."'" ;
     }
     else{
-        $sql_filtre = $sql_filtre . " AND type =" . $_GET['filtre_type'] ;
+        $sql_filtre = $sql_filtre . " WHERE type LIKE '%" . $_POST['filtre_type'] ."'" ;
     }
 }
 
+$List_cara=array();
+
+if (isset($_POST['filtre_car_p'])){array_push($List_cara, $_POST['filtre_car_p']);}
+if (isset($_POST['filtre_car_v'])){array_push($List_cara, $_POST['filtre_car_v']);}
+if (isset($_POST['filtre_car_f'])){array_push($List_cara, $_POST['filtre_car_f']);}
+if (isset($_POST['filtre_car_c'])){array_push($List_cara, $_POST['filtre_car_c']);}
+if (isset($_POST['filtre_car_i'])){array_push($List_cara, $_POST['filtre_car_i']);}
+if (isset($_POST['filtre_car_e'])){array_push($List_cara, $_POST['filtre_car_e']);}
 
 
-if(isset($_POST['filtre_car'])){
-    if($ok2){
+if(!empty($List_cara)){
+    if($ok2 or $ok){
+        foreach ($List_cara as $cara ){
+            $sql_filtre = $sql_filtre . " AND type LIKE '%" . $cara . "%'";
+        }
+
+    }
+    else {
+        foreach ($List_cara as $cara ){
+            $sql_filtre = $sql_filtre . " WHERE type LIKE '%" . $cara . "%'";
+        }
 
     }
 }
 
-*/
+$sql_filtre = $sql_filtre . ";";
 
+echo $sql_filtre;
 
-    
+$sth_filtre = $dbh->prepare( $sql_filtre );
+$sth_filtre->execute();
+$pathos = $sth_filtre->fetchAll(PDO::FETCH_OBJ);
+
 $Smarty -> assign("pathos" , $pathos);
-
-// elseif(isset($_GET['filtre_type'])){
-//     $sql_filtre_type =" SELECT * FROM patho WHERE type = :code ;";
-//     $sth_filtre_type = $dbh->prepare( $sql_filtre_type );
-//     $sth_filtre_type->execute(array(':code' => $_GET['filtre_mer']));
-//     $pathos = $sth_filtre_type->fetchAll(PDO::FETCH_OBJ);
-// }
-// elseif(isset($_GET['filtre_symp'])){
-//     $sql_filtre_symp =" SELECT * FROM patho WHERE mer = :code ;";
-//     $sth_filtre_symp = $dbh->prepare( $sql_filtre_symp );
-//     $sth_filtre_symp -> execute(array(':code' => $_GET['filtre_mer']));
-//     $pathos = $sth_filtre_symp->fetchAll(PDO::FETCH_OBJ);
-// }
-
-
 
 //var_dump($pathos);
 

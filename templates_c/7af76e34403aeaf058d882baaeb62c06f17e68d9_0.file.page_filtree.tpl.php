@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-17 09:30:01
+/* Smarty version 4.1.0, created on 2022-03-17 11:25:28
   from '/var/www/html/SITE/templates/page_filtree.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6232f189f0a5e4_51539680',
+  'unifunc' => 'content_62330c98006970_80958630',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7af76e34403aeaf058d882baaeb62c06f17e68d9' => 
     array (
       0 => '/var/www/html/SITE/templates/page_filtree.tpl',
-      1 => 1647505258,
+      1 => 1647511597,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6232f189f0a5e4_51539680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62330c98006970_80958630 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -71,17 +71,17 @@ function content_6232f189f0a5e4_51539680 (Smarty_Internal_Template $_smarty_tpl)
             <h2> Filtrez par Caracteristiques </h2>
             <br>
             Plein     
-            <input class ="P"   type="checkbox"  name="filtre_type" value="p">  <br>    
-            Chaud   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="c">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_p" value="p">  <br>    
             Vide   
-            <input class ="P"   type="checkbox"  name="filtre_type" value="v">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_v" value="v">  <br>   
             Froid    
-            <input class ="P"   type="checkbox"  name="filtre_type" value="f">  <br>    
+            <input class ="P"   type="checkbox"  name="filtre_car_f" value="f">  <br>    
+            Chaud   
+            <input class ="P"   type="checkbox"  name="filtre_car_c" value="c">  <br>   
             Interne   
-            <input class ="P"   type="checkbox"  name="filtre_type"  value="i">  <br>   
+            <input class ="P"   type="checkbox"  name="filtre_car_i"  value="i">  <br>   
             Externe  
-            <input class ="P"   type="checkbox"  name="filtre_type"  value="e">  <br> 
+            <input class ="P"   type="checkbox"  name="filtre_car_e"  value="e">  <br> 
             <br>
 
 
