@@ -9,44 +9,56 @@
 
         <h1>PAGE FILTRE</h1>
 
-        <div id="myBtnContainer" class="btnContainer">
+        <form id="myBtnContainer" class="btnContainer" action="index_smarty.php?page=page_filtree" method="POST">
             
             <a class="a_filtre" href="index_smarty.php?page=page_filtree"> Afficher tout</a>
             
-            <div>
-                <h2>Filtrez par Meridien <br>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     P       </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=GI">    GI      </a>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=E">     E       </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=Rte">   Rte     </a>
-                </h2> <br>
+            <br>
+            <h2>Filtrez par Meridien </h2>
+            <br>
+            P      
+            <input class ="P"   type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="P">  <br>
+            GI     
+            <input class ="GI"  type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="GI">  <br> 
+            E      
+            <input class ="E"   type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="E">   <br>
+            Rte    
+            <input class ="Rte" type="checkbox"  name="filtre_mer"  onclick="onlyOne(this)" value="Rte">  <br>
+            <br>
 
-                <br>    
-            </div>  
+  
+            <h2> Filtrez par Type </h2>
+            <br>
+            me      
+            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="me">  <br>    
+            mi      
+            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="mi">  <br>   
+            lp      
+            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="lp">  <br>   
+            lv      
+            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="lv">  <br>    
+            <br>   
 
-            <div>   
-                <h2> Filtrez par Type <br>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=me">   me      </a>     
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=mi">   mi      </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=lp">   lp      </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_type=lv">   lv      </a> 
-                </h2> <br>   
 
-            </div>
+            <h2> Filtrez par Caracteristiques </h2>
+            <br>
+            Plein     
+            <input class ="P"   type="checkbox"  name="filtre_type" value="me">  <br>    
+            Chaud   
+            <input class ="P"   type="checkbox"  name="filtre_type" value="mi">  <br>   
+            Vide   
+            <input class ="P"   type="checkbox"  name="filtre_type" value="lp">  <br>   
+            Froid    
+            <input class ="P"   type="checkbox"  name="filtre_type" value="lv">  <br>    
+            Interne   
+            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="lp">  <br>   
+            Externe  
+            <input class ="P"   type="checkbox"  name="filtre_type"  onclick="onlyOne2(this)" value="lv">  <br> 
+            <br>
 
-            <div>
-                <h2> Filtrez par Caracteristiques <br>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Plein   </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Chaud   </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Vide    </a>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Froid   </a> 
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Interne </a>
-                    <a class="a_filtre" href="index_smarty.php?page=page_filtree&filtre_mer=P">     Externe </a>
-                </h2> <br>
 
-            </div>
-
-        </div> 
+            <button type="submit" name="submit_button"> submit </button>
+        </form> 
 
         <div class="apropos">
 
@@ -60,4 +72,5 @@
         {include file='footer.tpl'}
 
     </body>
+    <script src="js/test_form.js"></script>
 </html>
